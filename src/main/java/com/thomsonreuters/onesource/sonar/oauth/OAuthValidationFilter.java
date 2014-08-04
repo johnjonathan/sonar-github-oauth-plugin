@@ -59,7 +59,7 @@ public class OAuthValidationFilter extends ServletFilter {
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
 
         if (user == null) {
-            httpResponse.sendRedirect("/oauth/unauthorized");
+            httpResponse.sendRedirect("/githuboauth/unauthorized");
         } else {
             servletRequest.setAttribute(OAuthUsersProvider.OAUTH_USER_KEY, user);
             filterChain.doFilter(servletRequest, servletResponse);
